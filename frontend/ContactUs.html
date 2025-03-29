@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style/Home.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    fullName: form.fullName.value,
+                    email: form.email.value,
+                    phone: form.phone.value,
+                    message: form.message.value
+                };
+                
+                // Here you would typically make an AJAX call to your server
+                // For demo purposes, we'll just show the success message
+                successMessage.style.display = 'block';
+                
+                // Clear form
+                form.reset();
+                
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <div class="contact-container">
+        <div class="left-section">
+            <div class="contact-details">
+                <h2>Contact Details</h2>
+                <p><strong>Mobile:</strong> +91-1234567890</p>
+                <p><strong>Email:</strong> fraudsniffer123@gmail.com</p>
+                <p><strong>Location:</strong> Vijayawada, Andhra Pradesh</p>
+            </div>
+            <br>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=PVP%20Siddhartha%20Institute%20of%20Technology&zoom=10&maptype=roadmap"
+                    title="Vijayawada Map"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="form-container">
+                <h2>Contact Form</h2>
+                <form id="contactForm">
+                    <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Full Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required
+                    />
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Mobile Number"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Send your Message ...!"
+                        required
+                    ></textarea>
+                    <button type="submit" class="submit-button">
+                        Submit
+                    </button>
+                    <p id="successMessage" class="success-message" style="display: none;">
+                        Your message has been sent successfully!
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove("open");
+        }
+    });
+});
+fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+
+</script>
+
+
+</body>
+</html>

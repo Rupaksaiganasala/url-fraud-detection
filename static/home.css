@@ -1,0 +1,372 @@
+/* FraudSniffer Common CSS for All Pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body.aboutus-content-, body.contact-page, body.home-before, body.home-after {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.contact-page {
+    background-image: url('images/contact.jpg');
+}
+.home-before {
+    background-image: url('images/home_before.jpg');
+}
+.home-after {
+    background-image: url('images/home_after.jpg');
+}
+
+.container, .contact-container {
+    padding: 2rem;
+    border-radius: 10px;
+    /* background-color:rgb(84 81 81 / 60%); */
+    color: white;
+    text-align: center;
+}
+.aboutus-container{
+    padding: 2rem;
+    border-radius: 10px;
+    /* background-color:rgb(84 81 81 / 60%); */
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
+
+h1, h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+button.submit-button, button.predict-btn, .get-started-btn {
+    background-color: #00BFA6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.aboutus-container h1 {
+    text-align: center;
+}
+button.submit-button:hover, button.predict-btn:hover, .get-started-btn:hover {
+    background-color: #009f8a;
+}
+
+  /* Header Styles */
+  
+
+/******/
+
+.contact-container {
+    width: 100%; /* Ensure it spans the full width */
+    max-width: none; /* Remove any restrictions */
+    background: linear-gradient(#2C3333,#395b64,#A5C9CA, #E7F6F2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    background-color: #f5f5f5; 
+}
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 60%;
+    background-color: #395b64;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container {
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .details-container p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: white; 
+  }
+  
+  .map-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
+  
+  .right-section {
+    flex: 1;
+    max-width: 40%; 
+  }
+  
+  .form-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .submit-button {
+    width: 93%;
+    background-color: #2C3333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #E7F6F2;
+    color:black;
+  }
+  
+  .success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+
+.form__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  top: -24px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 75%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(+4rem);
+  transform: translateY(+4rem);
+}
+
+
+.button {
+  appearance: button;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, #fff, #f8eedb);
+  border: 0 solid #e5e7eb;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #482307;
+  column-gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  outline: 2px solid transparent;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-transform: none;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+}
+
+.button:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81,41,10,0.15),0px 1px 1px rgba(81,41,10,0.15);
+  transform: translateY(0.125rem);
+}
+
+.button:focus {
+  box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
+}
+
+
+.main-body{
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  justify-content:space-around;
+}
+
+.button1{
+  appearance: button;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgb(160, 245, 174), #37ee65);
+  border: 0 solid #e5e7eb;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #482307;
+  column-gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  outline: 2px solid transparent;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-transform: none;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+  display: none;
+}
+
+.button2{
+  appearance: button;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgb(252, 162, 162), #ee3737);
+  border: 0 solid #e5e7eb;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #482307;
+  column-gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  outline: 2px solid transparent;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-transform: none;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+  display: none;
+}
+
+.right {
+  right: 0px;
+  width: 300px; 
+}
+
+@media (max-width: 576px) { 
+  .form {
+    width: 100%;
+  }
+ }
+.abc{
+  width: 50%;
+}
+ 
+  
+/* Hamburger Menu - Default Hidden */
+
+
+
+
+  
+

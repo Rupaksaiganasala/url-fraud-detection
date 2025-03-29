@@ -1,0 +1,76 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #333;
+            min-height: 100vh;
+            background: url('../images/about.jpg');
+        }
+
+        
+
+        .aboutus-container {
+            position: relative;
+            min-height: 100vh;
+            /* background: url('./images/about.jpg'); */
+            padding-top: 80px;
+        }
+
+        .aboutus-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: url('../images/about1.jpg');
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(243, 237, 237, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin: 1rem 0 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #e52e71;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        h3 {
+            color: #fff;
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #eedbdb;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            color: #e0d6d6;
+        }
+
+        li strong {
+            color: #0066ff;
+        }
+
+        
+

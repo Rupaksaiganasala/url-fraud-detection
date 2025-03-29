@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudSniffer</title>
+    <link rel="stylesheet" href="style/Home.css">
+    <link rel="stylesheet" href="style/Header.css">
+</head>
+<body>
+    <!-- Include Header -->
+    
+    <div id="header-placeholder"></div>
+    <main class="main-content">
+        <div class="container">
+            <h1>Welcome to FraudSniffer</h1>
+            <p>Protect yourself from malicious websites and harmful URLs. Learn how to stay safe online.</p>
+            <br>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+    </script>
+    <script>
+        document.querySelector(".get-started-btn").addEventListener("click", function() {
+          window.location.href = "Home_After.html";
+        });
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+      </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing URL Detector</title>
+    <link rel="stylesheet" href="style/Home.css">
+    <link rel="stylesheet" href="style/Header.css">
+    
+</head>
+<body>
+     <!-- Include Header -->
+     <div id="header-placeholder"></div>
+
+    <div class="container">
+        <div class="icon-container">
+            <img src="./images/pish_icon.png" alt="Paper Plane Icon" class="icon">
+        </div>
+        <h1>PHISHING URL DETECTOR</h1>
+        <div class="input-container">
+            <input type="text" placeholder="Enter the URL">
+            <button class="predict-btn">Predict</button>
+        </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('open');
+    }
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
