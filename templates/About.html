@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FraudSniffer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <div class="aboutus-container">
+        <h1>About Us</h1>
+        <div class="aboutus-content">
+            <h2>Beware of Malicious Websites and URLs</h2>
+            <p>
+                Malicious websites and URLs are designed to deceive users into providing sensitive information, infecting devices with malware, or redirecting users to dangerous locations on the internet. These websites often appear legitimate, but they may contain harmful scripts, viruses, or phishing attempts aimed at stealing personal details.
+            </p>
+<br>
+            <h2>Key Risks of Malicious Websites and URLs:</h2>
+            
+                <p>
+                    <strong>Phishing Attacks:</strong> Fraudulent websites may mimic real websites to steal login credentials, credit card details, and other personal information.
+                </p>
+                <p>
+                    <strong>Malware:</strong> Clicking on malicious links may download harmful software (viruses, ransomware, trojans) onto your device, leading to data loss or device damage.
+                </p>
+                <p>
+                    <strong>Data Breaches:</strong> Malicious sites can be used to steal and exploit your data for identity theft or unauthorized access to accounts.
+                </p>
+                <p>
+                    <strong>Drive-by Downloads:</strong> Simply visiting a malicious website can trigger automatic downloads of malicious files or software without your knowledge or consent.
+                </p>
+            
+<br>
+            <h2>How to Protect Yourself:</h2>
+            
+                <p>
+                    <strong>Be Cautious with Links:</strong> Avoid clicking on suspicious or unexpected links in emails, messages, or websites.
+                </p>
+                <p>
+                    <strong>Check URL Carefully:</strong> Always verify that the website URL matches the expected address and starts with "https" (not just "http").
+                </p>
+                <p>
+                    <strong>Use Security Software:</strong> Install and maintain up-to-date antivirus software and use browser extensions that block dangerous websites.
+                </p>
+                <p>
+                    <strong>Enable Two-Factor Authentication:</strong> Protect sensitive accounts by using two-factor authentication whenever possible.
+                </p>
+                <p>
+                    <strong>Keep Software Updated:</strong> Regularly update your browser, operating system, and security software to stay protected from known vulnerabilities.
+                </p>
+           
+
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+        fetch("/header") 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
+
+
+
+</body>
+</html>

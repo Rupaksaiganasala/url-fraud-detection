@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudSniffer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Welcome to FraudSniffer</h1>
+            <p>Protect yourself from malicious websites and harmful URLs.</p>
+            <br>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector(".get-started-btn").addEventListener("click", function() {
+            window.location.href = "/home_after";  // Redirect to backend route
+        });
+
+        fetch("/header") 
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

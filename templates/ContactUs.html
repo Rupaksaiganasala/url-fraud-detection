@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='home.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='header.css') }}"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <div class="contact-container">
+      <div class="left-section">
+        <div class="contact-details">
+          <h2>Contact Details</h2>
+          <p><strong>Mobile:</strong> +91-1234567890</p>
+          <p><strong>Email:</strong> fraudsniffer123@gmail.com</p>
+          <p><strong>Location:</strong> Vijayawada, Andhra Pradesh</p>
+        </div>
+        <br />
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=PVP%20Siddhartha%20Institute%20of%20Technology&zoom=10&maptype=roadmap"
+            title="Vijayawada Map"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="form-container">
+          <h2>Contact Form</h2>
+          <form id="contactForm">
+            <input
+              type="text"
+              id="name"
+              name="fullname"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Mobile Number"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Send your Message ...!"
+              required
+            ></textarea>
+            <button type="submit" class="submit-button">Submit</button>
+            <p
+              id="successMessage"
+              class="success-message"
+              style="display: none"
+            >
+              Your message has been sent successfully!
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+      
+            emailjs.init("nkuxTXXLnYWopLa1_"); 
+            console.log("Form Data:", new FormData(document.getElementById("contactForm"))); // Debugging
+      
+            emailjs.sendForm("service_pao4t9a", "template_xtu1e8g", "#contactForm")
+            .then(function (response) {
+              document.getElementById("successMessage").style.display = "block";
+              alert("SUCCESS! Email sent successfully.");
+              event.target.reset();
+            })
+            .catch(function (error) {
+              alert("FAILED... Error occurred while sending email.");
+            });
+          });
+        });
+        fetch("/header") 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+      </script>
+      
+  </body>
+</html>
